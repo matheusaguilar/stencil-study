@@ -1,5 +1,4 @@
 import { Component, Host, h, Prop } from '@stencil/core';
-import clsx from 'clsx';
 import { Color, Shape } from '../globals';
 
 @Component({
@@ -18,9 +17,6 @@ export class MyButton {
     return (
       <Host>
         <button
-          class={clsx(`MyButton ${this.color} ${this.shape} ${this.size}`, {
-            elevation: this.elevation,
-          })}
           disabled={this.disabled}
         >
           <slot>Default</slot>

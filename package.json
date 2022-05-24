@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "scripts": {
+    "start": "cd packages/stencil-components && npm run start",
+    "test": "cd packages/stencil-components && npm run test",
+    "test:watch": "cd packages/stencil-components && npm run test.watch",
+    "storybook": "cd packages/stencil-components && npm run storybook",
+    "build:react": "cd packages/react-components && npm run build",
+    "build:stencil": "cd packages/stencil-components && npm run build",
+    "build:storybook": "cd packages/stencil-components && npm run build"
+  }
+}
