@@ -25,7 +25,7 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook.run": "start-storybook -p 6006 -s dist",
-    "storybook": "yarn build && yarn storybook.run",
+    "storybook": "npm run build && npm run storybook.run",
     "build-storybook": "build-storybook -c ./.storybook -o ../public"
   },
   "dependencies": {

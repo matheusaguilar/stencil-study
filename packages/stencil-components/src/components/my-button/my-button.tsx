@@ -16,7 +16,7 @@ export class MyButton {
   render() {
     return (
       <Host>
-        <button
+        <button class="MyButton primary"
           disabled={this.disabled}
         >
           <slot>Default</slot>
