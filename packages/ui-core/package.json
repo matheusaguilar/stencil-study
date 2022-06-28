@@ -1,5 +1,5 @@
 {
-  "name": "stencil-components",
+  "name": "ui-core",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
@@ -9,7 +9,7 @@
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-components/stencil-components.esm.js",
+  "unpkg": "dist/ui-core/ui-core.esm.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
@@ -29,6 +29,7 @@
     "build-storybook": "build-storybook -c ./.storybook -o ../public"
   },
   "dependencies": {
+    "@ionic/core": "^6.1.11",
     "@stencil/core": "^2.13.0",
     "@stencil/react-output-target": "^0.3.1",
     "@stencil/sass": "^1.5.2"
@@ -42,6 +43,7 @@
     "@storybook/addon-viewport": "^6.4.20",
     "@storybook/html": "^6.4.20",
     "@types/jest": "^27.0.3",
+    "@types/node": "^18.0.0",
     "babel-loader": "^8.2.4",
     "case": "^1.6.3",
     "jest": "^27.4.5",

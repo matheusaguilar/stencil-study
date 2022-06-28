@@ -6,5 +6,5 @@ module.exports = {
   "addons": [
     '@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-viewport', '@storybook/addon-notes'
   ],
-  "framework": "@storybook/html"
+  "framework": "@storybook/html",
 }

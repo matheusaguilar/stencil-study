@@ -7,6 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Color, Shape } from "./components/globals";
 export namespace Components {
+    interface IonicButton {
+    }
     interface MyButton {
         "color"?: Color;
         "disabled"?: boolean;
@@ -30,6 +32,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLIonicButtonElement extends Components.IonicButton, HTMLStencilElement {
+    }
+    var HTMLIonicButtonElement: {
+        prototype: HTMLIonicButtonElement;
+        new (): HTMLIonicButtonElement;
+    };
     interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
     }
     var HTMLMyButtonElement: {
@@ -43,11 +51,14 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "ionic-button": HTMLIonicButtonElement;
         "my-button": HTMLMyButtonElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface IonicButton {
+    }
     interface MyButton {
         "color"?: Color;
         "disabled"?: boolean;
@@ -70,6 +81,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "ionic-button": IonicButton;
         "my-button": MyButton;
         "my-component": MyComponent;
     }
@@ -78,6 +90,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ionic-button": LocalJSX.IonicButton & JSXBase.HTMLAttributes<HTMLIonicButtonElement>;
             "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
